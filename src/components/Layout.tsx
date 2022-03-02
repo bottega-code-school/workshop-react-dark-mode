@@ -6,14 +6,20 @@ type Props = {
   children: React.ReactNode;
 };
 const Layout = ({ children }: Props) => {
-  const { backgroundColor, color } = React.useContext(ThemeContext);
+  const { backgroundColor, backgroundColorHighlight, color } =
+    React.useContext(ThemeContext);
 
   return (
-    <div style={{ backgroundColor, color }}>
+    <div style={{ backgroundColor, color, minHeight: "100vh" }}>
       <NavBar />
 
       <div className="container">
-        <div className="content">{children}</div>
+        <div
+          className="content"
+          style={{ backgroundColor: backgroundColorHighlight }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );
