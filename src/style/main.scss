@@ -1,5 +1,6 @@
 :root {
   --highlight: #141926;
+  --bg-highlight: #272c3a;
   --primary: #0f6375;
   --off-white: #f6f6f6;
   --sans: "Noto Sans JP", sans-serif;
@@ -66,6 +67,7 @@ button {
       a {
         padding: 8px 15px;
         border-radius: 15px;
+        color: var(--primary);
       }
 
       .theme-toggler {

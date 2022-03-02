@@ -1,5 +1,4 @@
 import * as React from "react";
-import { ThemeProvider } from "./ThemeContext";
 import Home from "./Home";
 import { Route, Switch } from "react-router";
 import About from "./About";
@@ -12,11 +11,7 @@ const routes = [
 ];
 
 const App = () => {
-  return (
-    <ThemeProvider>
-      <Switch>{routes}</Switch>
-    </ThemeProvider>
-  );
+  return <Switch>{routes}</Switch>;
 };
 
 export default App;
